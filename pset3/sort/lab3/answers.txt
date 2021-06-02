@@ -1,0 +1,47 @@
+sort1 uses: bubble sort
+
+How do you know?: best-time complexity and worst-time complexity are on different orders
+
+##########
+Time taken
+##########
+
+reversed5000    : 0m0.182s
+reversed10000   : 0m0.389s
+reversed50000   : 0m11.577s
+
+sorted5000      : 0m0.013s
+sorted10000     : 0m0.070s
+sorted50000     : 0m3.641s
+
+sort2 uses: merge sort
+
+How do you know?: worst-time complexity and best-time complexity is on the same order and time taken is less than sort3
+
+##########
+Time taken
+##########
+
+reversed5000    : 0m0.012s
+reversed10000   : 0m0.060s
+reversed50000   : 0m3.198s
+
+sorted5000      : 0m0.013s
+sorted10000     : 0m0.017s
+sorted50000     : 0m5.432s
+
+sort3 uses: selection sort
+
+How do you know?: worst-time complexity and best-time complexity is on the same order and time taken is more than sort2
+
+##########
+Time taken
+##########
+
+reversed5000    : 0m0.069s
+reversed10000   : 0m0.177s
+reversed50000   : 0m7.591s
+
+sorted5000      : 0m0.040s
+sorted10000     : 0m0.184s
+sorted50000     : 0m8.965s
