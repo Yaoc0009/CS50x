@@ -1,0 +1,25 @@
+body
+{
+    background-color: #0000ff;
+    color: white;
+}
+
+.centered
+{
+    text-align: center;
+}
+
+.large
+{
+    font-size: large;
+}
+
+.medium
+{
+    font-size: medium;
+}
+
+.small
+{
+    font-size: small;
+}
