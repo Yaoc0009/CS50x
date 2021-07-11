@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            // TODO: Add code to check answers to questions
+            // Ensure that all code is run before functions
+            document.addEventListener('DOMContentLoaded', function() {
+
+                function answer() {
+                    let ans = document.querySelector('#ans');
+                    // Button click
+                    if (document.getElementById('elephant').clicked == true) {
+                           ans.innerHTML = 'Incorrect answer, try something bigger';
+                    }
+
+                    else if (document.getElementById('shuttle').clicked == true) {
+                           ans.innerHTML = 'Incorrect answer, try something bigger';
+                    }
+
+                    else if (document.getElementById('mercury').clicked == true) {
+                           ans.innerHTML = 'Incorrect answer, try something smaller';
+                    }
+
+                     else if (document.getElementById('sun').clicked == true) {
+                           ans.innerHTML = 'Incorrect answer, try something smaller';
+                    }
+                }
+
+
+
+                let input = document.querySelector('input');
+                // Hint given as user types into the blank
+                input.addEventListener('keyup', function(event) {
+                    let reply = document.querySelector('#reply');
+                    if (input.value.length < 'supercalifragilisticexpialidocious'.length) {
+                        reply.innerHTML = 'Bzzzt! Word is too short.';
+                    }
+
+                    else if (input.value.length > 'supercalifragilisticexpialidocious'.length) {
+                        reply.innerHTML = "Bzzzt! Word is too long.";
+                    }
+
+                    else {
+                        reply.innerHTML = 'Hmm...';
+                    }
+                })
+
+                // Alert whether the answer submitted was correct
+                document.querySelector('form').addEventListener('submit', function() {
+                    if (input.value.toLowerCase() === 'supercalifragilisticexpialidocious') {
+                        alert('Congratulations! Mary Poppins will be proud!');
+                    }
+
+                    else {
+                        alert('Bzzzt! Try again!');
+                    }
+                })
+            })
+
+
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>
+                    Click the name of the object that is closest in size to the
+                    <a href='#' onclick=''>Moon</a>.
+                </h3>
+                <p id='ans'></p>
+                <br>
+                <button id='elephant' type='button' onclick="answer()">Elephant</button>
+                <button id='mercury' type='button' onclick="answer()">Mercury</button>
+
+                <hr style='height:2px; visibility:hidden; margin-bottom:-1px;'>
+
+                <button id='sun' type='button' onclick="answer()">Sun</button>
+                <button id='shuttle' type='button' onclick="answer()">Space Shuttle</button>
+
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>Guess ONE word she sang.</h3>
+                <form>
+                    <input autocomplete='off' placeholder='What one word did she sing?' type='text'>
+                    <input type='submit'>
+                    <p id='reply'></p>
+                </form>
+                <br>
+                <img src='marypoppins.png' alt='Mary Poppins'>
+            </div>
+
+        </div>
+    </body>
+</html>
